@@ -1,34 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My First Website</title>
-<style>
-body{
-font-family: Arial;
-text-align:center;
-background:#f2f2f2;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-h1{
-color:#2c3e50;
-}
+    body {
+      background: #f5f7fa;
+    }
 
-button{
-padding:10px 20px;
-background:#3498db;
-color:white;
-border:none;
-border-radius:5px;
-}
-</style>
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .logo-space {
+      width: 140px;
+      height: 50px;
+      border: 2px dashed #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 14px;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    .menu {
+      display: flex;
+      gap: 30px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #222;
+      font-size: 16px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #007bff;
+    }
+
+    .cta-button a {
+      text-decoration: none;
+      background: #007bff;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .cta-button a:hover {
+      background: #0056d2;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<h1>Welcome to My Website 🚀</h1>
-<p>This site is hosted using GitHub Pages.</p>
+  <nav class="navbar">
+    <div class="logo-space">
+      Logo Image
+    </div>
 
-<button>Click Me</button>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="cta-button">
+      <a href="#">Get Started</a>
+    </div>
+  </nav>
 
 </body>
 </html>
